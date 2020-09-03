@@ -1,0 +1,34 @@
+<?php
+$posts = $block->GetBlog();
+?>
+
+<table>
+    <tr>
+        <th class="blog-id">Id</th>
+        <th class="blog-name">Tiêu Đề</th>
+        <th>Summary</th>
+        <th>Nội Dung</th>
+    </tr>
+    <?php
+    foreach ($posts as $data) {
+        echo '<tr>
+                  <td>' . $data->getId() . '</td>
+                    <td>' . $data->getTitle() . '</td>
+                    <td>' . $data->getSummary() . '</td>
+                    <td>' . $data->getDescription() . '</td>
+                  </tr>';
+    }
+    ?>
+</table>
+
+<div id="reactRoot">
+
+</div>
+
+<div data-mage-init='{"app": {"message": "X!"}}'>
+    Content
+</div>
+
+<script src="../../../view/frontend/web/js/test.js" ">
+
+</script>
