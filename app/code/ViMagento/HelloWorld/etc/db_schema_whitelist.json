@@ -1,0 +1,21 @@
+{
+    "catalog_product_entity_ABC": {
+        "column": {
+            "entity_id": true,
+            "attribute_set_id": true,
+            "type_id": true,
+            "sku": true,
+            "has_options": true,
+            "required_options": true,
+            "created_at": true,
+            "updated_at": true
+        },
+        "index": {
+            "CATALOG_PRODUCT_ENTITY_ABC_ATTRIBUTE_SET_ID": true,
+            "CATALOG_PRODUCT_ENTITY_ABC_SKU": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="catalog_product_entity_ABC" resource="default" engine="innodb" comment="Catalog Product Table">
+        <column xsi:type="int" name="entity_id" padding="10" unsigned="true" nullable="false" identity="true"
+                comment="Entity ID"/>
+        <column xsi:type="smallint" name="attribute_set_id" padding="5" unsigned="true" nullable="false"
+                identity="false" default="0" comment="Attribute Set ID"/>
+        <column xsi:type="varchar" name="type_id" nullable="false" length="32" default="simple" comment="Type ID"/>
+        <column xsi:type="varchar" name="sku" nullable="true" length="64" comment="SKU"/>
+        <column xsi:type="smallint" name="has_options" padding="6" unsigned="false" nullable="false" identity="false"
+                default="0" comment="Has Options"/>
+        <column xsi:type="smallint" name="required_options" padding="5" unsigned="true" nullable="false"
+                identity="false" default="0" comment="Required Options"/>
+        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP"
+                comment="Creation Time"/>
+        <column xsi:type="timestamp" name="updated_at" on_update="true" nullable="false" default="CURRENT_TIMESTAMP"
+                comment="Update Time"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+        <index referenceId="CATALOG_PRODUCT_ENTITY_ABC_ATTRIBUTE_SET_ID" indexType="btree">
+            <column name="attribute_set_id"/>
+        </index>
+        <index referenceId="CATALOG_PRODUCT_ENTITY_ABC_SKU" indexType="btree">
+            <column name="sku"/>
+        </index>
+    </table>
+
+    <table name="helloworld_post" resource="default" engine="innodb" comment="Post Table">
+        <column xsi:type="int" name="post_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Post ID"/>
+        <column xsi:type="varchar" name="name" nullable="false" length="255" default="simple" comment="Post Name"/>
+        <column xsi:type="int" name="status" nullable="false" padding="10" comment="Post Status"/>
+        <column xsi:type="text" name="content" nullable="false" comment="Post Content"/>
+        <column xsi:type="timestamp" name="created_at" on_update="true" nullable="false" default="CURRENT_TIMESTAMP" comment="Created Time"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY"><column name="post_id"/>
+        </constraint>
+        <index referenceId="POST_HELLOWORLD_ATTRIBUTE_SET_ID" indexType="btree">
+            <column name="post_id"/>
+        </index>
+    </table>
+</schema>
