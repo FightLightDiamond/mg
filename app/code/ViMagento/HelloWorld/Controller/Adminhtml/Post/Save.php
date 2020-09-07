@@ -41,8 +41,11 @@ class Save extends Action
             } else {
                 $this->getMessageManager()->addSuccessMessage(__('Save thành công.'));
             }
+
             $post->addData($newData);
+            $this->_eventManager->dispatch("vimagento_post_before_save", ['postData' => $post]);
             $post->save();
+
             return $this->resultRedirect->create()->setPath('helloworld/post/index');
         } catch (\Exception $e) {
             $this->getMessageManager()->addErrorMessage(__('Save thất bại.'));

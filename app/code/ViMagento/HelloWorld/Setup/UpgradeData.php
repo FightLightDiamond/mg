@@ -20,7 +20,7 @@ class UpgradeData implements \Magento\Framework\Setup\UpgradeDataInterface
     {
         $data = [
             'name'         => "Magento 2 thêm dữ liệu vào bảng vimagento_helloworld_post 22",
-            'post_content' => "Content 22.",
+            'content' => "Content 22.",
             'status'       => 1
         ];
 

@@ -32,7 +32,7 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
                     'Post Name'
                 )
                 ->addColumn(
-                    'post_content',
+                    'content',
                     \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
                     '64k',
                     [],
@@ -60,10 +60,10 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
                 $installer->getTable('vimagento_helloworld_post'),
                 $setup->getIdxName(
                     $installer->getTable('vimagento_helloworld_post'),
-                    ['name', 'post_content'],
+                    ['name', 'content'],
                     \Magento\Framework\DB\Adapter\AdapterInterface::INDEX_TYPE_FULLTEXT
                 ),
-                ['name', 'post_content'],
+                ['name', 'content'],
                 \Magento\Framework\DB\Adapter\AdapterInterface::INDEX_TYPE_FULLTEXT
             );
         }

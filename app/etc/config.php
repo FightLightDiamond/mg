@@ -284,6 +284,7 @@ return [
         'Magento_Wishlist' => 1,
         'Magento_WishlistAnalytics' => 1,
         'Magento_WishlistGraphQl' => 1,
+        'ViMagento_Checkout' => 1,
         'ViMagento_HelloWorld' => 1,
         'Amazon_Core' => 1,
         'Amazon_Login' => 1,

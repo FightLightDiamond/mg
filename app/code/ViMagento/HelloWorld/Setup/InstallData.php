@@ -19,7 +19,7 @@ class InstallData implements InstallDataInterface
     {
         $data = [
             'name'         => "Magento 2 thêm dữ liệu vào bảng vimagento_helloworld_post",
-            'post_content' => "Content.",
+            'content' => "Content.",
             'status'       => 1
         ];
         $post = $this->_postFactory->create();
