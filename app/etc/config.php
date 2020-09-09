@@ -286,6 +286,8 @@ return [
         'Magento_WishlistGraphQl' => 1,
         'ViMagento_Checkout' => 1,
         'ViMagento_HelloWorld' => 1,
+        'ViMagento_OrderGrid' => 1,
+        'ViMagento_Sort' => 1,
         'Amazon_Core' => 1,
         'Amazon_Login' => 1,
         'Amazon_Payment' => 1,
