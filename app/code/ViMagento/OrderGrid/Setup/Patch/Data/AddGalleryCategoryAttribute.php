@@ -3,13 +3,14 @@
 
 namespace ViMagento\OrderGrid\Setup\Patch\Data;
 
+
 use Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface;
 use Magento\Eav\Setup\EavSetup;
 use Magento\Eav\Setup\EavSetupFactory;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 
-class AddCategoryAttribute implements DataPatchInterface
+class AddGalleryCategoryAttribute implements DataPatchInterface
 {
     /**
      * ModuleDataSetupInterface
@@ -47,10 +48,10 @@ class AddCategoryAttribute implements DataPatchInterface
         /** @var EavSetup $eavSetup */
         $eavSetup = $this->eavSetupFactory->create(['setup' => $this->moduleDataSetup]);
 
-        $eavSetup->addAttribute('catalog_category', 'image_model_attribute', [
-            'type' => 'varchar',
-            'label' => 'Model Image',
-            'input' => 'image',
+        $eavSetup->addAttribute('catalog_category', 'gallery_attribute', [
+            'type' => 'static',
+            'label' => 'Media gallery',
+            'input' => 'media_gallery',
             'default' => '',
             'global' => ScopedAttributeInterface::SCOPE_STORE,
             'visible' => true,
@@ -58,8 +59,7 @@ class AddCategoryAttribute implements DataPatchInterface
             'user_defined' => true,
             'required' => false,
             'group' => 'General',
-            'backend' => 'Magento\Catalog\Model\Category\Attribute\Backend\Image',
-            'sort_order' => 80,
+            'sort_order' => 90,
         ]);
     }
 
