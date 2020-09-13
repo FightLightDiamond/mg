@@ -1,10 +1,9 @@
 <?php
 
-
 namespace ViMagento\OrderGrid\Model\Category;
 
-
-class DataProvider extends \Magento\Catalog\Model\Category\DataProvider{
+class DataProvider extends \Magento\Catalog\Model\Category\DataProvider
+{
     protected function getFieldsMap()
     {
         $fields = parent::getFieldsMap();

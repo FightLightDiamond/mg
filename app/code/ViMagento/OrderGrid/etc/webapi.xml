@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+<!--    <route method="GET" url="/V1/vimagento-ordergrid/category-image">-->
+<!--        <service class="ViMagento\OrderGrid\Api\CategoryImageManagementInterface" method="getCategoryImages"/>-->
+<!--        <resources>-->
+<!--            <resource ref="anonymous"/>-->
+<!--        </resources>-->
+<!--    </route>-->
+    <route method="GET" url="/V1/vimagento-ordergrid/category-image">
+        <service class="ViMagento\OrderGrid\Api\CategoryImageManagementInterface" method="index"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route method="POST" url="/V1/vimagento-ordergrid/category-image">
+        <service class="ViMagento\OrderGrid\Api\CategoryImageManagementInterface" method="create"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route method="POST" url="/V1/vimagento-ordergrid/category-image-del">
+        <service class="ViMagento\OrderGrid\Api\CategoryImageManagementInterface" method="destroy"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>

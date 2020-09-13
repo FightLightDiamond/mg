@@ -13,21 +13,24 @@
             <argument name="resourceModel" xsi:type="string">Magento\Sales\Model\ResourceModel\Order</argument>
         </arguments>
     </type>
-    <type name="ViMagento\OrderGrid\Controller\Adminhtml\Category\Upload">
-        <arguments>
-            <argument name="imageUploader" xsi:type="object">Magento\Catalog\CategoryImageUpload</argument>
-        </arguments>
-    </type>
-    <virtualType name="Magento\Catalog\CategoryImageUpload" type="Magento\Catalog\Model\ImageUploader">
-        <arguments>
-            <argument name="baseTmpPath" xsi:type="string">catalog/tmp/category</argument>
-            <argument name="basePath" xsi:type="string">catalog/category</argument>
-            <argument name="allowedExtensions" xsi:type="array">
-                <item name="pdf" xsi:type="string">pdf</item>
-                <item name="txt" xsi:type="string">txt</item>
-                <item name="doc" xsi:type="string">doc</item>
-            </argument>
-        </arguments>
-    </virtualType>
-    <preference for="Magento\Catalog\Model\Category\DataProvider" type="ViMagento\OrderGrid\Model\Category\DataProvider" />
+<!--    <type name="ViMagento\OrderGrid\Controller\Adminhtml\Category\Upload">-->
+<!--        <arguments>-->
+<!--            <argument name="imageUploader" xsi:type="object">Magento\Catalog\CategoryImageUpload</argument>-->
+<!--        </arguments>-->
+<!--    </type>-->
+<!--    <virtualType name="Magento\Catalog\CategoryImageUpload" type="Magento\Catalog\Model\ImageUploader">-->
+<!--        <arguments>-->
+<!--            <argument name="baseTmpPath" xsi:type="string">catalog/tmp/category</argument>-->
+<!--            <argument name="basePath" xsi:type="string">catalog/category</argument>-->
+<!--            <argument name="allowedExtensions" xsi:type="array">-->
+<!--                <item name="pdf" xsi:type="string">pdf</item>-->
+<!--                <item name="txt" xsi:type="string">txt</item>-->
+<!--                <item name="doc" xsi:type="string">doc</item>-->
+<!--            </argument>-->
+<!--        </arguments>-->
+<!--    </virtualType>-->
+<!--    <preference for="Magento\Catalog\Model\Category\DataProvider" type="ViMagento\OrderGrid\Model\Category\DataProvider" />-->
+
+    <preference for="ViMagento\OrderGrid\Api\CategoryImageManagementInterface" type="ViMagento\OrderGrid\Model\CategoryImageManagement"/>
+
 </config>

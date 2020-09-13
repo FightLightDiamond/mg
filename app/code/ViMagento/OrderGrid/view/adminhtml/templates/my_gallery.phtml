@@ -1,0 +1,544 @@
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<div class="row" id="images">
+
+</div>
+<form  id="myForm" name="myForm">
+    <input type="hidden" name="category_id" value="2">
+    <input type="hidden" name="category_id" value="2">
+    <input type="file" id="inputUpload" name="image" >
+    <button id="uploadImage" type="button" class="btn btn-xs btn-primary">Upload</button>
+</form>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!--<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous">-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>-->
+
+<script>
+
+    // jQuery(document).ready(function () {
+    //     console.log('ITEM', item)
+    //     jQuery.ajax({
+    //         url: 'http://mage.to.vn/rest/V1/vimagento-ordergrid/category-image?category_id=1',
+    //         method: 'GET',
+    //         success: function (data) {
+    //             let html = ''
+    //
+    //             data[1].forEach(function (item) {
+    //                 console.log('ITEM', item)
+    //a
+    //                 html += `
+    //                  <div class="col-xs-6 col-md-3">
+    //                     <a href="#" class="thumbnail">
+    //                       <img src="http://mage.to.vn/pub/media/custom_image${item.name}" alt="...">
+    //                     </a>
+    //                     <h4>${item.id}</h4>
+    //                  </div>
+    //             `
+    //
+    //                 jQuery('#images').html(html)
+    //             })
+    //         },
+    //         error: function (error) {
+    //             alert('Error')
+    //         }
+    //     })
+
+
+        jQuery('#uploadImage').click(function () {
+            let myForm = document.getElementById('myForm');
+            let formData = new FormData(myForm);
+
+            jQuery.ajax({
+                url: 'http://mage.to.vn/rest/V1/vimagento-ordergrid/category-image',
+                method: 'POST',
+                data: formData
+                success: function (data) {
+                    alert(data)
+                },
+                // error: function (error) {
+                    alert('Error')
+                }
+            })
+        })
+    })
+
+
+</script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<div class="row" id="images">
+
+</div>
+<form  id="myForm" name="myForm">
+    <input type="hidden" name="category_id" value="2">
+    <input type="hidden" name="category_id" value="2">
+    <input type="file" id="inputUpload" name="image" >
+    <button id="uploadImage" type="button" class="btn btn-xs btn-primary">Upload</button>
+</form>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!--<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous">-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>-->
+
+<script>
+
+    // jQuery(document).ready(function () {
+    //     console.log('ITEM', item)
+    //     jQuery.ajax({
+    //         url: 'http://mage.to.vn/rest/V1/vimagento-ordergrid/category-image?category_id=1',
+    //         method: 'GET',
+    //         success: function (data) {
+    //             let html = ''
+    //
+    //             data[1].forEach(function (item) {
+    //                 console.log('ITEM', item)
+    //a
+    //                 html += `
+    //                  <div class="col-xs-6 col-md-3">
+    //                     <a href="#" class="thumbnail">
+    //                       <img src="http://mage.to.vn/pub/media/custom_image${item.name}" alt="...">
+    //                     </a>
+    //                     <h4>${item.id}</h4>
+    //                  </div>
+    //             `
+    //
+    //                 jQuery('#images').html(html)
+    //             })
+    //         },
+    //         error: function (error) {
+    //             alert('Error')
+    //         }
+    //     })
+
+
+        jQuery('#uploadImage').click(function () {
+            let myForm = document.getElementById('myForm');
+            let formData = new FormData(myForm);
+
+            jQuery.ajax({
+                url: 'http://mage.to.vn/rest/V1/vimagento-ordergrid/category-image',
+                method: 'POST',
+                data: formData
+                success: function (data) {
+                    alert(data)
+                },
+                // error: function (error) {
+                    alert('Error')
+                }
+            })
+        })
+    })
+
+
+</script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<div class="row" id="images">
+
+</div>
+<form  id="myForm" name="myForm">
+    <input type="hidden" name="category_id" value="2">
+    <input type="hidden" name="category_id" value="2">
+    <input type="file" id="inputUpload" name="image" >
+    <button id="uploadImage" type="button" class="btn btn-xs btn-primary">Upload</button>
+</form>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!--<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous">-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>-->
+
+<script>
+
+    // jQuery(document).ready(function () {
+    //     console.log('ITEM', item)
+    //     jQuery.ajax({
+    //         url: 'http://mage.to.vn/rest/V1/vimagento-ordergrid/category-image?category_id=1',
+    //         method: 'GET',
+    //         success: function (data) {
+    //             let html = ''
+    //
+    //             data[1].forEach(function (item) {
+    //                 console.log('ITEM', item)
+    //a
+    //                 html += `
+    //                  <div class="col-xs-6 col-md-3">
+    //                     <a href="#" class="thumbnail">
+    //                       <img src="http://mage.to.vn/pub/media/custom_image${item.name}" alt="...">
+    //                     </a>
+    //                     <h4>${item.id}</h4>
+    //                  </div>
+    //             `
+    //
+    //                 jQuery('#images').html(html)
+    //             })
+    //         },
+    //         error: function (error) {
+    //             alert('Error')
+    //         }
+    //     })
+
+
+        jQuery('#uploadImage').click(function () {
+            let myForm = document.getElementById('myForm');
+            let formData = new FormData(myForm);
+
+            jQuery.ajax({
+                url: 'http://mage.to.vn/rest/V1/vimagento-ordergrid/category-image',
+                method: 'POST',
+                data: formData
+                success: function (data) {
+                    alert(data)
+                },
+                // error: function (error) {
+                    alert('Error')
+                }
+            })
+        })
+    })
+
+
+</script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<div class="row" id="images">
+
+</div>
+<form  id="myForm" name="myForm">
+    <input type="hidden" name="category_id" value="2">
+    <input type="hidden" name="category_id" value="2">
+    <input type="file" id="inputUpload" name="image" >
+    <button id="uploadImage" type="button" class="btn btn-xs btn-primary">Upload</button>
+</form>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!--<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous">-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>-->
+
+<script>
+
+    // jQuery(document).ready(function () {
+    //     console.log('ITEM', item)
+    //     jQuery.ajax({
+    //         url: 'http://mage.to.vn/rest/V1/vimagento-ordergrid/category-image?category_id=1',
+    //         method: 'GET',
+    //         success: function (data) {
+    //             let html = ''
+    //
+    //             data[1].forEach(function (item) {
+    //                 console.log('ITEM', item)
+    //a
+    //                 html += `
+    //                  <div class="col-xs-6 col-md-3">
+    //                     <a href="#" class="thumbnail">
+    //                       <img src="http://mage.to.vn/pub/media/custom_image${item.name}" alt="...">
+    //                     </a>
+    //                     <h4>${item.id}</h4>
+    //                  </div>
+    //             `
+    //
+    //                 jQuery('#images').html(html)
+    //             })
+    //         },
+    //         error: function (error) {
+    //             alert('Error')
+    //         }
+    //     })
+
+
+        jQuery('#uploadImage').click(function () {
+            let myForm = document.getElementById('myForm');
+            let formData = new FormData(myForm);
+
+            jQuery.ajax({
+                url: 'http://mage.to.vn/rest/V1/vimagento-ordergrid/category-image',
+                method: 'POST',
+                data: formData
+                success: function (data) {
+                    alert(data)
+                },
+                // error: function (error) {
+                    alert('Error')
+                }
+            })
+        })
+    })
+
+
+</script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<div class="row" id="images">
+
+</div>
+<form  id="myForm" name="myForm">
+    <input type="hidden" name="category_id" value="2">
+    <input type="hidden" name="category_id" value="2">
+    <input type="file" id="inputUpload" name="image" >
+    <button id="uploadImage" type="button" class="btn btn-xs btn-primary">Upload</button>
+</form>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!--<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous">-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>-->
+
+<script>
+
+    // jQuery(document).ready(function () {
+    //     console.log('ITEM', item)
+    //     jQuery.ajax({
+    //         url: 'http://mage.to.vn/rest/V1/vimagento-ordergrid/category-image?category_id=1',
+    //         method: 'GET',
+    //         success: function (data) {
+    //             let html = ''
+    //
+    //             data[1].forEach(function (item) {
+    //                 console.log('ITEM', item)
+    //a
+    //                 html += `
+    //                  <div class="col-xs-6 col-md-3">
+    //                     <a href="#" class="thumbnail">
+    //                       <img src="http://mage.to.vn/pub/media/custom_image${item.name}" alt="...">
+    //                     </a>
+    //                     <h4>${item.id}</h4>
+    //                  </div>
+    //             `
+    //
+    //                 jQuery('#images').html(html)
+    //             })
+    //         },
+    //         error: function (error) {
+    //             alert('Error')
+    //         }
+    //     })
+
+
+        jQuery('#uploadImage').click(function () {
+            let myForm = document.getElementById('myForm');
+            let formData = new FormData(myForm);
+
+            jQuery.ajax({
+                url: 'http://mage.to.vn/rest/V1/vimagento-ordergrid/category-image',
+                method: 'POST',
+                data: formData
+                success: function (data) {
+                    alert(data)
+                },
+                // error: function (error) {
+                    alert('Error')
+                }
+            })
+        })
+    })
+
+
+</script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<div class="row" id="images">
+
+</div>
+<form  id="myForm" name="myForm">
+    <input type="hidden" name="category_id" value="2">
+    <input type="hidden" name="category_id" value="2">
+    <input type="file" id="inputUpload" name="image" >
+    <button id="uploadImage" type="button" class="btn btn-xs btn-primary">Upload</button>
+</form>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!--<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous">-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>-->
+
+<script>
+
+    // jQuery(document).ready(function () {
+    //     console.log('ITEM', item)
+    //     jQuery.ajax({
+    //         url: 'http://mage.to.vn/rest/V1/vimagento-ordergrid/category-image?category_id=1',
+    //         method: 'GET',
+    //         success: function (data) {
+    //             let html = ''
+    //
+    //             data[1].forEach(function (item) {
+    //                 console.log('ITEM', item)
+    //a
+    //                 html += `
+    //                  <div class="col-xs-6 col-md-3">
+    //                     <a href="#" class="thumbnail">
+    //                       <img src="http://mage.to.vn/pub/media/custom_image${item.name}" alt="...">
+    //                     </a>
+    //                     <h4>${item.id}</h4>
+    //                  </div>
+    //             `
+    //
+    //                 jQuery('#images').html(html)
+    //             })
+    //         },
+    //         error: function (error) {
+    //             alert('Error')
+    //         }
+    //     })
+
+
+        jQuery('#uploadImage').click(function () {
+            let myForm = document.getElementById('myForm');
+            let formData = new FormData(myForm);
+
+            jQuery.ajax({
+                url: 'http://mage.to.vn/rest/V1/vimagento-ordergrid/category-image',
+                method: 'POST',
+                data: formData
+                success: function (data) {
+                    alert(data)
+                },
+                // error: function (error) {
+                    alert('Error')
+                }
+            })
+        })
+    })
+
+
+</script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<div class="row" id="images">
+
+</div>
+<form  id="myForm" name="myForm">
+    <input type="hidden" name="category_id" value="2">
+    <input type="hidden" name="category_id" value="2">
+    <input type="file" id="inputUpload" name="image" >
+    <button id="uploadImage" type="button" class="btn btn-xs btn-primary">Upload</button>
+</form>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!--<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous">-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>-->
+
+<script>
+
+    // jQuery(document).ready(function () {
+    //     console.log('ITEM', item)
+    //     jQuery.ajax({
+    //         url: 'http://mage.to.vn/rest/V1/vimagento-ordergrid/category-image?category_id=1',
+    //         method: 'GET',
+    //         success: function (data) {
+    //             let html = ''
+    //
+    //             data[1].forEach(function (item) {
+    //                 console.log('ITEM', item)
+    //a
+    //                 html += `
+    //                  <div class="col-xs-6 col-md-3">
+    //                     <a href="#" class="thumbnail">
+    //                       <img src="http://mage.to.vn/pub/media/custom_image${item.name}" alt="...">
+    //                     </a>
+    //                     <h4>${item.id}</h4>
+    //                  </div>
+    //             `
+    //
+    //                 jQuery('#images').html(html)
+    //             })
+    //         },
+    //         error: function (error) {
+    //             alert('Error')
+    //         }
+    //     })
+
+
+        jQuery('#uploadImage').click(function () {
+            let myForm = document.getElementById('myForm');
+            let formData = new FormData(myForm);
+
+            jQuery.ajax({
+                url: 'http://mage.to.vn/rest/V1/vimagento-ordergrid/category-image',
+                method: 'POST',
+                data: formData
+                success: function (data) {
+                    alert(data)
+                },
+                // error: function (error) {
+                    alert('Error')
+                }
+            })
+        })
+    })
+
+
+</script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<div class="row" id="images">
+
+</div>
+<form  id="myForm" name="myForm">
+    <input type="hidden" name="category_id" value="2">
+    <input type="hidden" name="category_id" value="2">
+    <input type="file" id="inputUpload" name="image" >
+    <button id="uploadImage" type="button" class="btn btn-xs btn-primary">Upload</button>
+</form>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!--<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous">-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>-->
+
+<script>
+
+    // jQuery(document).ready(function () {
+    //     console.log('ITEM', item)
+    //     jQuery.ajax({
+    //         url: 'http://mage.to.vn/rest/V1/vimagento-ordergrid/category-image?category_id=1',
+    //         method: 'GET',
+    //         success: function (data) {
+    //             let html = ''
+    //
+    //             data[1].forEach(function (item) {
+    //                 console.log('ITEM', item)
+    //a
+    //                 html += `
+    //                  <div class="col-xs-6 col-md-3">
+    //                     <a href="#" class="thumbnail">
+    //                       <img src="http://mage.to.vn/pub/media/custom_image${item.name}" alt="...">
+    //                     </a>
+    //                     <h4>${item.id}</h4>
+    //                  </div>
+    //             `
+    //
+    //                 jQuery('#images').html(html)
+    //             })
+    //         },
+    //         error: function (error) {
+    //             alert('Error')
+    //         }
+    //     })
+a
+
+        jQuery('#uploadImage').click(function () {
+            let myForm = document.getElementById('myForm');
+            let formData = new FormData(myForm);
+
+            jQuery.ajax({
+                url: 'http://mage.to.vn/rest/V1/vimagento-ordergrid/category-image',
+                method: 'POST',
+                data: formData
+                success: function (data) {
+                    alert(data)
+                },
+                // error: function (error) {
+                    alert('Error')
+                }
+            })
+        })
+    })
+
+
+</script>
